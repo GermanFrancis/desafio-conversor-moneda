@@ -13,5 +13,4 @@ El proyecto forma parte del segundo desafio de Alura Latam y fue desarrollado en
 
 ## Captura de pantalla
 
-![App Screenshot](![imagen](https://github.com/GermanFrancis/java-currency-converter/assets/139584349/fa77d9af-e7ef-411a-a66d-d72c3ade6c65)
-)
+![Captura de pantalla](/src/img/Captura%20de%20pantalla%202024-05-06%20123233.png)
