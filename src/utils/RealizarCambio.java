@@ -4,8 +4,11 @@ import Records.Moneda;
 import java.text.DecimalFormat;
 
 public class RealizarCambio {
-    public double cambioMoneda(Moneda tipoCambio, double moneda){
+    public void cambioMoneda(Moneda tipoCambio, double moneda){
         DecimalFormat df = new DecimalFormat("0.00");
-        return Double.parseDouble(df.format(moneda * tipoCambio.conversion_rate()));
+        System.out.println("El tipo de cambio para "+moneda+" ["
+                +tipoCambio.base_code()+"] es -> "
+                +df.format(moneda * tipoCambio.conversion_rate())
+                +" ["+tipoCambio.target_code()+"]");
     }
 }

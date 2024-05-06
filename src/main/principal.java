@@ -33,18 +33,19 @@ public class principal {
                 opcion = Integer.parseInt(keyboardInput.nextLine());
                 if (opcion > 7){
                     System.out.println("¡La opcion ingresada no existe!");
-                }else{
+                } else if (opcion == 7) {
+                    System.out.println("¡Programa finalizado!");
+                } else{
                     ConsultarCambio consulta = new ConsultarCambio();
                     Moneda moneda = consulta.buscarMoneda(opcion);
-                    System.out.print("Ingrese la moneda a cambiar -> ");
+                    System.out.print("Ingrese el valor que desea convertir -> ");
                     double entradaMoneda = Double.parseDouble(keyboardInput.nextLine());
                     RealizarCambio cambio = new RealizarCambio();
-                    System.out.println("El tipo de cambio es -> " + cambio.cambioMoneda(moneda,entradaMoneda));
+                    cambio.cambioMoneda(moneda,entradaMoneda);
                 }
             }catch (NumberFormatException e) {
                 System.out.println("¡Opción no valida (" + e.getMessage() + ")!");
             }
         }
-        System.out.println("¡Programa finalizado!");
     }
 }
